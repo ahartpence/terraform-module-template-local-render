@@ -10,6 +10,6 @@ data "template_file" "local_template" {
 
 resource "local_file" "local_file" {
     content     = data.template_file.local_template.rendered
-    filename    = "${path.module}/${var.rendered_file_name}"
+    filename    = "${path.root}/${var.rendered_file_name}"
 }
 
